@@ -28,6 +28,16 @@ To get it, visit the **General Information** tab, and copy it.
 ## Running GZDoom
 To run GZDoom with the Discord Presence, open a command prompt in the GZDoom directory, and run `gzdoom.bat`, and select which **WAD** you want to load using command line arguments.
 
+The available WADs are:
+- [DOOM.WAD](https://github.com/Fonta22/GZDoom-Loader/blob/main/files/WAD/DOOM.WAD)
+- [DOOM2.WAD](https://github.com/Fonta22/GZDoom-Loader/blob/main/files/WAD/DOOM2.WAD)
+- [HERETIC.WAD](https://github.com/Fonta22/GZDoom-Loader/blob/main/files/WAD/HERETIC.WAD)
+- [HEXEN.WAD](https://github.com/Fonta22/GZDoom-Loader/blob/main/files/WAD/HEXEN.WAD)
+
+You can see them inside the [`WAD/` folder](https://github.com/Fonta22/GZDoom-Loader/tree/main/files/WAD).
+
+> All of these files were taken from the [Internet Archive](https://archive.org/).
+
 Example to run **Doom II**
 ```
 > gzdoom.bat DOOM2
