@@ -10,6 +10,11 @@ load_dotenv(find_dotenv())
 client_id = os.environ.get("APP_ID")
 game = sys.argv[1]
 
+if client_id == '':
+    print('ERROR: App ID not found in `.env` file.')
+    print('Please set-up your Discord Application first.')
+    exit()
+
 if game == 'DOOM2':
     game = 'Doom II'
 else:
@@ -28,9 +33,14 @@ def checkProcess(processName):
 
 RPC = Presence(client_id)
 
-print(f'Загрузка {game}...')
+try:
+    RPC.connect()
+except:
+    print('ERROR: Invalid App ID in `.env` file.')
+    print('Please set-up your Discord Application first.')
+    exit()
 
-RPC.connect()
+print(f'Загрузка {game}...')
 
 RPC.update(
     details=f'Playing {game}',
@@ -45,4 +55,5 @@ print(f'Running presence: {game}')
 while True:
     if not checkProcess('gzdoom.exe'):
         print('')
+        print(f'{game} stopped running.')
         exit()
